@@ -1,0 +1,70 @@
+package com.example.Operacion.exception.handler;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+
+import com.example.Operacion.exception.response.ErrorResponse;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
+    // Manejador de excepciones genericas
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleGeneralException(Exception ex, WebRequest request) {
+        String path = request.getDescription(false);
+
+        // No manejar excepciones para rutas de Swagger
+        if (path.contains("swagger-ui") || path.contains("v3/api-docs") || path.contains("swagger-ui.html")) {
+            return ResponseEntity.status(HttpStatus.OK).build(); // Swagger no requiere respuesta de error
+        }
+
+        // Para otras excepciones, loguear el error
+        logger.error("Error no manejado: {}", path, ex);
+        ErrorResponse error = new ErrorResponse(
+                "Error interno del servidor",
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                path);
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // Manejador para errores de solicitud incorrecta
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorResponse> handleBadRequestException(IllegalArgumentException ex, WebRequest request) {
+        logger.error("Error de solicitud incorrecta: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST.value(),
+                request.getDescription(false));
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    // Manejador para NullPointerException
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<ErrorResponse> handleNullPointerException(NullPointerException ex, WebRequest request) {
+        logger.error("NullPointerException: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+                "Recurso no encontrado",
+                HttpStatus.NOT_FOUND.value(),
+                request.getDescription(false));
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
+
+    // Manejador para HttpMessageNotReadableException
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ErrorResponse> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex,
+            WebRequest request) {
+        logger.error("Se ingreso un dato erroneo: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+                "Se ingreso un dato erroneo",
+                HttpStatus.BAD_REQUEST.value(),
+                request.getDescription(false));
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+}
