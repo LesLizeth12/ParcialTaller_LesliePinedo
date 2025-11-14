@@ -1,0 +1,9 @@
+-- db_operacion.operacion definition
+
+CREATE TABLE `operacion` (
+  `idOperacion` int NOT NULL AUTO_INCREMENT,
+  `idCliente` int DEFAULT NULL,
+  `tipoOperacion` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `total` int DEFAULT NULL,
+  PRIMARY KEY (`idOperacion`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

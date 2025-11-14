@@ -2911,3 +2911,67 @@ Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted b
 2025-11-13T23:17:11.237-05:00  INFO 18880 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : Started OperacionApplication in 17.678 seconds (process running for 18.921)
 2025-11-13T23:17:11.245-05:00  WARN 18880 --- [Operacion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
 2025-11-13T23:17:11.246-05:00  WARN 18880 --- [Operacion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-13T23:23:40.488-05:00  INFO 14084 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : Starting OperacionApplication using Java 21.0.9 with PID 14084 (C:\Users\lespi\Documents\GitHub\ParcialTaller_LesliePinedo\Operacion\Operacion\target\classes started by lespi in C:\Users\lespi\Documents\GitHub\ParcialTaller_LesliePinedo)
+2025-11-13T23:23:40.495-05:00  INFO 14084 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T23:23:46.112-05:00  INFO 14084 --- [Operacion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T23:23:46.435-05:00  INFO 14084 --- [Operacion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 281 ms. Found 1 JPA repository interface.
+2025-11-13T23:23:49.662-05:00  INFO 14084 --- [Operacion] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 87 (http)
+2025-11-13T23:23:49.739-05:00  INFO 14084 --- [Operacion] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T23:23:49.740-05:00  INFO 14084 --- [Operacion] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-13T23:23:50.225-05:00  INFO 14084 --- [Operacion] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T23:23:50.227-05:00  INFO 14084 --- [Operacion] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9492 ms
+2025-11-13T23:23:51.319-05:00  INFO 14084 --- [Operacion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T23:23:54.102-05:00  INFO 14084 --- [Operacion] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35e74e08
+2025-11-13T23:23:54.109-05:00  INFO 14084 --- [Operacion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T23:23:54.657-05:00  INFO 14084 --- [Operacion] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T23:23:55.598-05:00  INFO 14084 --- [Operacion] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-13T23:23:55.994-05:00  INFO 14084 --- [Operacion] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T23:23:58.048-05:00  INFO 14084 --- [Operacion] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T23:23:58.714-05:00  WARN 14084 --- [Operacion] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T23:23:58.728-05:00  WARN 14084 --- [Operacion] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-13T23:23:58.829-05:00  INFO 14084 --- [Operacion] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-13T23:24:02.078-05:00  INFO 14084 --- [Operacion] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T23:24:02.085-05:00  INFO 14084 --- [Operacion] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T23:24:04.433-05:00  WARN 14084 --- [Operacion] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T23:24:06.665-05:00  INFO 14084 --- [Operacion] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 87 (http) with context path '/'
+2025-11-13T23:24:06.697-05:00  INFO 14084 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : Started OperacionApplication in 27.828 seconds (process running for 30.24)
+2025-11-13T23:24:06.710-05:00  WARN 14084 --- [Operacion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-13T23:24:06.712-05:00  WARN 14084 --- [Operacion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-13T23:24:41.920-05:00  INFO 11284 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : Starting OperacionApplication using Java 21.0.9 with PID 11284 (C:\Users\lespi\Documents\GitHub\ParcialTaller_LesliePinedo\Operacion\Operacion\target\classes started by lespi in C:\Users\lespi\Documents\GitHub\ParcialTaller_LesliePinedo)
+2025-11-13T23:24:41.928-05:00  INFO 11284 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T23:24:45.618-05:00  INFO 11284 --- [Operacion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T23:24:45.868-05:00  INFO 11284 --- [Operacion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interface.
+2025-11-13T23:24:47.664-05:00  INFO 11284 --- [Operacion] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 87 (http)
+2025-11-13T23:24:47.697-05:00  INFO 11284 --- [Operacion] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T23:24:47.698-05:00  INFO 11284 --- [Operacion] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-13T23:24:47.965-05:00  INFO 11284 --- [Operacion] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T23:24:47.968-05:00  INFO 11284 --- [Operacion] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5813 ms
+2025-11-13T23:24:48.899-05:00  INFO 11284 --- [Operacion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T23:24:50.400-05:00  INFO 11284 --- [Operacion] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78116659
+2025-11-13T23:24:50.405-05:00  INFO 11284 --- [Operacion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T23:24:50.805-05:00  INFO 11284 --- [Operacion] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T23:24:51.094-05:00  INFO 11284 --- [Operacion] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-13T23:24:51.251-05:00  INFO 11284 --- [Operacion] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T23:24:52.775-05:00  INFO 11284 --- [Operacion] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T23:24:53.093-05:00  WARN 11284 --- [Operacion] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T23:24:53.096-05:00  WARN 11284 --- [Operacion] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-13T23:24:53.140-05:00  INFO 11284 --- [Operacion] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-13T23:24:55.656-05:00  INFO 11284 --- [Operacion] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T23:24:55.676-05:00  INFO 11284 --- [Operacion] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T23:24:56.571-05:00  WARN 11284 --- [Operacion] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T23:24:57.805-05:00  INFO 11284 --- [Operacion] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 87 (http) with context path '/'
+2025-11-13T23:24:57.841-05:00  INFO 11284 --- [Operacion] [main] c.e.Operacion.OperacionApplication       : Started OperacionApplication in 17.283 seconds (process running for 19.563)
